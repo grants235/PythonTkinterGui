@@ -2,11 +2,16 @@
 
 root = Tk()
 
+e = Entry(root)
+e.pack()
+e.insert(0, "Enter Your Name")
+
 def myClick():
-    myLabel = Label(root, text="Look! I clicked a button!!")
+    hello = "Hello " + e.get()
+    myLabel = Label(root, text=hello)
     myLabel.pack()
 
-myButton = Button(root, text="Click Me!", command=myClick, bg="light blue")
+myButton = Button(root, text="Submit", command=myClick, bg="light blue")
 myButton.pack()
 
 root.mainloop()
